@@ -145,7 +145,7 @@ jobs:
       # Windows
       - if: matrix.platform == 'windows'
         run: python -u release/build.py standalone-binaries
-      - if: matrix.platform == 'windows' && github.repository == 'mitmproxy/mitmproxy' &&
+      - if: matrix.platform == 'windows' &&
             (github.ref == 'refs/heads/citest' || startsWith(github.ref, 'refs/tags/'))
         run: python -u release/build.py --dirty installbuilder-installer msix-installer
 
